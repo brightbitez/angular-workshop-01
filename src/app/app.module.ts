@@ -15,6 +15,6 @@ import { UsersComponent } from './users/users.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent,UsersComponent]
+  bootstrap: [UsersComponent]
 })
 export class AppModule { }

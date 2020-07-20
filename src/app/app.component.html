@@ -1,8 +1,8 @@
 {{title}}
-<form [formGroup]="profileForm">
-First Name: <input (keyup)="inputYourName($event)" formControlName="firstName"/>{{firstName}}
-Last Name: <input #lastname (keyup)="inputLastName(lastname.value)" formControlName="lastName"/>
+
+First Name: <input #firstName (keyup.enter)="save(firstName.value,lastname.value)"/>
+Last Name: <input #lastname (keyup.enter)="save(firstName.value,lastname.value)"/>
 {{lastName}}
-<button (click)= "clickEvent()">Save</button>
-</form>
+<button (click)="save(firstName.value,lastname.value)" type = "submit">Save</button>
+
 Result = {{name}}

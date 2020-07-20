@@ -12,6 +12,7 @@ export class UsersComponent {
   score = 100;
   show = true;
   name = '';
+  myStyle ='';
   colors = ['Red','Green','Blue'];
   lists = [];
   doneLists = [];
@@ -21,10 +22,15 @@ export class UsersComponent {
   }
   updateLists(done){
     if(this.doneLists.indexOf(done) !== -1){
-    this.doneLists.splice(this.doneLists.indexOf(done),1);}
+    this.doneLists.splice(this.doneLists.indexOf(done),1);
+    this.myStyle = "none";}
   
     else{
-      this.doneLists.push(done);}
+      this.doneLists.push(done);
+      this.myStyle = "line-through";
+    
+    
+    }
     }
   
 }

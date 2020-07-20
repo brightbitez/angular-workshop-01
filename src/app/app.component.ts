@@ -9,15 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'my-dream-app';
-  score = 100;
-  show = true;
-  firstName = '';
-  name = '';
-  lastName = '';
-  colors = ['Red','Green','Blue'];
 
-  save(firstName,lastName){
-    this.name = firstName + " " + lastName;
-  }
 }

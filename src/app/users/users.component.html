@@ -1,0 +1,8 @@
+
+Input Todo:  <input #todo (keyup.enter)="save(todo.value)"/>
+<button (click)="save(todo.value)">Save</button>
+<p>Lists:</p>
+Count = {{doneLists.length}}/{{lists.length}}
+<li *ngFor="let list of lists">
+    <p (click)="updateLists(list)">{{list}}</p>
+</li>

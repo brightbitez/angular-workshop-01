@@ -1,6 +1,23 @@
 
-Input Todo:  <input #todo (keyup.enter)="save(todo.value)"/>
-<button (click)="save(todo.value)">Save</button>
+Input Todo:  <input (keyup.enter)= "save(name.value)" id="name" name="name" class="form-control"
+required minlength="4" appForbiddenName="bob"
+[(ngModel)]="todo.name" #name="ngModel" >
+
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="name.errors.required">
+    name is required.
+  </div>
+  <div *ngIf="name.errors.minlength">
+    name must be at least 4 characters long.
+  </div>
+
+
+</div>
+<button (click)="save(name.value)">Save</button>
+
 <p>Lists:</p>
 Count = {{doneLists.length}}/{{lists.length}}
 <li *ngFor="let list of lists">
